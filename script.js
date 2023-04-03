@@ -6,7 +6,7 @@ function showImagePage() {
   document.getElementById("start-screen").style.display = "none";
   document.getElementById("image-page").style.display = "block";
   playAudio();
-  document.getElementById("background").classList.add("show"); // add show class to background element
+  document.getElementById("background").classList.add("show");
   positionHearts();
 }
 
@@ -23,7 +23,6 @@ function positionHearts() {
 
   function addHeart() {
     if (index >= 100) {
-      alert("Ambangis mo idol!");
       return;
     }
 
