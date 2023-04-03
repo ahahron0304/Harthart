@@ -37,6 +37,7 @@ button {
     height: 100%;
     background-image: url("https://i.ibb.co/k8zBPLT/heart-bg.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-position: center center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -51,5 +52,14 @@ button {
     button {
         font-size: 18px;
         padding: 8px 16px;
+    }
+
+    #center-image {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .heart-emoji {
+        font-size: 1rem;
     }
 }
