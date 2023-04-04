@@ -22,11 +22,19 @@ button {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .heart-emoji {
     position: absolute;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    animation-name: beat;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #background {
@@ -59,7 +67,35 @@ button {
         height: 60vw;
     }
 
+    .heart-container {
+        transform: scale(0.6);
+    }
+
     .heart-emoji {
         font-size: 1rem;
+    }
+
+    #background {
+        background-size: cover;
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(0, 10px);
+    }
+}
+
+@keyframes beat {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
     }
 }
