@@ -17,16 +17,17 @@ function playAudio() {
 
 function positionHearts() {
   const scaleFactor = 15;
-
+  const maxHearts = 100;
   const heartShape = document.getElementById("heart-shape");
   let index = 0;
 
   function addHeart() {
-    if (index >= 100) {
-      return;
+    if (index >= maxHearts) {
+      heartShape.innerHTML = "";
+      index = 0;
     }
 
-    const i = (index / 100) * 2 * Math.PI;
+    const i = (index / maxHearts) * 2 * Math.PI;
     const heartEmoji = document.createElement("span");
     heartEmoji.classList.add("heart-emoji");
     heartEmoji.textContent = "❤️";
@@ -45,7 +46,7 @@ function positionHearts() {
     heartShape.appendChild(heartEmoji);
 
     index++;
-    setTimeout(addHeart, 770);
+    setTimeout(addHeart, 720);
   }
 
   addHeart();
